@@ -1,15 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Variaveis */
 :root{
     --branco: #FFFFFF;
-    --preto: #000000;
-    --bege: #fbedd4;
-    --vermelhoPadrao: #ff3131;
-    --vermelhoEscuro: #250902;
+    --cinza: #BCBDC1;
+    --azul: #1f284f;
     --shadow: #00000063 0px 5px 20px;
     --fundo: rgba(0, 0, 0, 0.7)
 }
 
+/* Fontes */
+/*
+@font-face {
+    font-family: 'Alta';
+    src: url('/fontes/alta-regular.otf') format('opentype');
+}
+*/
+
+@font-face {
+    font-family: 'NexaExtra';
+    src: url('../fonts/Nexa-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NexaHeavy';
+    src: url('../fonts/Nexa-Heavy.ttf') format('truetype');
+}
+
+/* Geral */
 *{
     margin: 0;
     padding: 0;
