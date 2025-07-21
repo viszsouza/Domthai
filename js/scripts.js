@@ -1,15 +1,15 @@
 const items = [
     {
         text: "Entrega grátis na primeira compra",
-        icon: "https://cdn-icons-png.flaticon.com/512/684/684908.png" // localização
+        icon: "../imgs/iconesBanner/caminhao-sofa.png" // Entrega
     },
     {
-        text: "Devolução gratuita em até 7 dias",
-        icon: "https://cdn-icons-png.flaticon.com/512/1828/1828843.png" // devolução
+        text: "Parcele em até 6x no cartão",
+        icon: "../imgs/iconesBanner/cartao-de-credito.png" // Cartão
     },
     {
-        text: "10% OFF na primeira compra com o cupom BEMVINDO",
-        icon: "https://cdn-icons-png.flaticon.com/512/1170/1170576.png" // desconto
+        text: "Compra 100% segura",
+        icon: "../imgs/iconesBanner/verificacao-de-escudo.png" // Escudo
     }
 ];
 let currentIndex = 0;
@@ -40,7 +40,7 @@ function nextItem() {
     resetAutoPlay();
 }
 
-// Auto troca a cada 2s
+// Auto troca a cada 3s
 let interval = setInterval(() => {
     nextItem();
 }, 3000);
@@ -49,7 +49,7 @@ function resetAutoPlay() {
     clearInterval(interval);
     interval = setInterval(() => {
         nextItem();
-    }, 2000);
+    }, 3000);
 }
 
 // Inicializa com o primeiro item
