@@ -14,6 +14,8 @@
     width: 100%;
     font-family: 'NexaHeavy';
     z-index: 99;
+
+    box-shadow: var(--shadow);
 }
 
 .arrow {
@@ -176,7 +178,7 @@ header {
 
 /* Beneficios */
 
-.beneficios{
+.beneficios {
     background-image: url('/imgs/ImagemBeneficios.png');
     background-repeat: no-repeat;
     background-position: center top;
@@ -186,7 +188,7 @@ header {
     object-fit: cover;
 }
 
-.container-beneficios{
+.container-beneficios {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,39 +196,184 @@ header {
     color: var(--azul);
 }
 
-.beneficios-img img{
-    width: 100%;
-    max-width: 400px;
-
+.beneficios-img {
+    overflow: hidden;
     border-radius: 50px 0px 50px 0px;
     filter: drop-shadow(0px 0px 30px var(--cinza));
 }
 
-.beneficios-text{
+.beneficios-img img {
+    width: 100%;
+    max-width: 400px;
+    transition: 300ms;
+}
+
+.beneficios-img img:hover {
+    transform: scale(1.1);
+}
+
+.beneficios-text {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.beneficios-text h1{
+.beneficios-text h1 {
     font-family: "Lora";
     font-style: italic;
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.beneficios-item{
+.beneficios-item {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.beneficios-item img{
+.beneficios-item img {
     width: 35px;
 }
 
-.beneficios-item p{
+.beneficios-item p {
     font-family: 'NexaExtra';
     font-weight: bold;
     font-size: 20px;
+}
+
+/* Passo a Passo */
+
+.passo-a-passo {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    color: var(--azul);
+}
+
+.passo-tittle {
+    text-align: center;
+}
+
+.passo-tittle h1 {
+    font-family: "Lora";
+    font-style: italic;
+    font-size: 30px;
+}
+
+.passo-tittle p {
+    font-family: 'NexaExtra';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-passo-item {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 40px;
+}
+
+.passo-item {
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.passo-item img {
+    width: 100px;
+}
+
+.passo-item h1 {
+    font-family: "Lora";
+    font-style: italic;
+    font-size: 25px;
+}
+
+.passo-item p {
+    font-family: 'NexaExtra';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Depoimentos */
+
+.depoimentos {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: var(--azul);
+}
+
+.container-depoimentos{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.testimonial-card {
+    max-width: 500px;
+    border: 2px solid #1b2453;
+    border-radius: 8px;
+    padding: 24px;
+    color: #1b2453;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    background-color: #d9d9d9;
+    color: var(--azul);
+    font-size: 50px;
+    padding: 0px 15px;
+    height: 55px;
+    font-family: 'NexaHeavy';
+}
+
+.testimonial-text {
+    font-family: 'NexaExtra';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 24px;
+}
+
+.divider {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid var(--azul);
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-name {
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.stars {
+    color: var(--azul);
+    font-size: 25px;
+    letter-spacing: px; /* Reduz o espaçamento entre as letras */
 }

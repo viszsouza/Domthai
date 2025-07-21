@@ -57,11 +57,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--branco);        /* color of the tracking area */
+  background: var(--preto);        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--azul);    /* color of the scroll thumb */
+  background-color: var(--branco);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: none;  /* creates padding around scroll thumb */
 }
@@ -131,10 +131,27 @@ body::-webkit-scrollbar-thumb {
     transition: 300ms;
 
     z-index: 99;
-    filter: drop-shadow(0px 0px 30px var(--azul));
+    filter: drop-shadow(0px 0px 2px var(--azul));
 }
 
 .whatsapp img:hover{
+    transform: scale(0.95);
+}
+
+.acesso img{
+    position: fixed;
+    width: 110px;
+    bottom: 0;
+    margin-bottom: 170px;
+    right: 0;
+    margin-right: 65px;
+    transition: 300ms;
+
+    z-index: 99;
+    filter: drop-shadow(0px 0px 2px var(--azul));
+}
+
+.acesso img:hover{
     transform: scale(0.95);
 }
 
@@ -142,6 +159,11 @@ body::-webkit-scrollbar-thumb {
     .whatsapp img{
         margin-bottom: 20px;
         margin-right: 20px;
+    }
+
+    .acesso img{
+        margin-bottom: 120px;
+        margin-right: 10px;
     }
 }
 
