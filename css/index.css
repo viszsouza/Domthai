@@ -483,7 +483,7 @@ details {
     padding: 20px;
 }
 
-.detalhe{
+.detalhe {
     border-bottom: 1px solid var(--branco);
 }
 
@@ -516,7 +516,7 @@ summary:after {
 details[open] summary:after {
     color: var(--branco);
     transform: rotate(45deg);
-    transition:  0.5s;
+    transition: 0.5s;
 }
 
 @keyframes details-show {
@@ -547,4 +547,186 @@ p.textos-resposta {
     padding: 5px 20px 20px 62px;
     font-weight: 400;
     font-family: "Lora", sans-serif;
+}
+
+/* Sobre nós */
+
+.sobre-nos {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.carousel-container2 {
+    position: relative;
+    width: 500px;
+    height: 560px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+.sobre-text{
+    width: 30%;
+    color: var(--azul);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sobre-text h1{
+    font-family: "Lora";
+    font-style: italic;
+    font-size: 25px;
+}
+
+.sobre-text p{
+    font-family: 'NexaExtra';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Rodapé */
+
+footer{
+    background-color: var(--azul);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--branco);
+}
+
+.footer-p1{
+    width: 80%;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+.footer-logo img{
+    width: 200px;
+}
+
+.footer-text{
+    display: flex;
+    gap: 60px;
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item-tittle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-item img{
+    width: 30px;
+}
+
+.footer-item h1{
+    font-family: "Lora";
+    font-style: italic;
+    font-size: 25px;
+}
+
+.footer-item p{
+    font-family: 'NexaExtra';
+    font-weight: 500;
+    font-size: 18px;  
+    width: 300px;
+}
+
+.footer-item2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-p2{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px var(--branco);
+    padding-top: 30px;
+}
+
+.copy a{
+    font-family: 'NexaExtra';
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--branco);
+    transition: 300ms;
+}
+
+.copy a:hover{
+    color: var(--cinza);
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.redes img{
+    width: 30px;
 }
