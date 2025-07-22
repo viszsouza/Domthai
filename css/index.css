@@ -315,7 +315,7 @@ header {
     color: var(--azul);
 }
 
-.container-depoimentos{
+.container-depoimentos {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -375,5 +375,176 @@ header {
 .stars {
     color: var(--azul);
     font-size: 25px;
-    letter-spacing: px; /* Reduz o espaçamento entre as letras */
+    letter-spacing: px;
+    /* Reduz o espaçamento entre as letras */
+}
+
+/* Catalogo */
+
+.catalogo {
+    background-color: var(--azul);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    padding: 40px 20px;
+}
+
+/* Portfólio */
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container-portfolio {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    /* grid-template-rows: 100px; */
+    grid-template-rows: 250px 250px;
+    gap: 3px;
+}
+
+.portfolio-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: 300ms;
+}
+
+.portfolio-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: var(--branco);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-item:hover p {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    opacity: 0.5;
+}
+
+/*CÓDIGO DÚVIDAS FREQUENTES*/
+
+section#fundo-azul-escuro {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    background-color: var(--branco);
+}
+
+/*Título dessa section*/
+section#fundo-azul-escuro>h1 {
+    font-family: "Lora";
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    color: var(--azul);
+}
+
+/*Caixas com as perguntas*/
+section div.caixa-perguntas {
+    width: auto;
+    height: min-content;
+    padding: 10px 40px 10px 15px;
+    margin: 40px 80px 0 80px;
+    border-radius: 20px;
+    background-color: var(--azul);
+}
+
+details {
+    padding: 20px;
+}
+
+.detalhe{
+    border-bottom: 1px solid var(--branco);
+}
+
+/*Tag details*/
+summary {
+    cursor: pointer;
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--branco);
+    background-color: var(--azul);
+    font-weight: 900;
+    font-family: 'NexaHeavy';
+}
+
+/* Faz com que apareça um "+" antes de clicar */
+summary:after {
+    width: 20px;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    left: 20px;
+    margin-right: 20px;
+    transition: transform 0.5s;
+    color: var(--branco);
+    background: var(--azul);
+}
+
+/*Faz com que apareça um "-" depois de clicar*/
+details[open] summary:after {
+    color: var(--branco);
+    transform: rotate(45deg);
+    transition:  0.5s;
+}
+
+@keyframes details-show {
+    from {
+        opacity: 0;
+        transform: translateY(-0.5em);
+    }
+}
+
+details[open]>*:not(summary) {
+    animation: details-show 150ms ease-in-out;
+}
+
+details>p {
+    text-align: justify;
+    font-size: 18px;
+    color: var(--branco);
+    font-weight: 400;
+    font-family: "Lora", sans-serif;
+}
+
+p.textos-resposta {
+    text-align: justify;
+    background-color: var(--azul);
+    font-size: 16px;
+    color: var(--branco);
+    font-weight: 700;
+    padding: 5px 20px 20px 62px;
+    font-weight: 400;
+    font-family: "Lora", sans-serif;
 }
