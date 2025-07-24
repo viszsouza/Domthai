@@ -10,7 +10,6 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding: 1rem;
-    max-width: 100%;
     width: 100%;
     font-family: 'NexaHeavy';
     z-index: 99;
@@ -73,6 +72,7 @@ header {
     display: flex;
     align-items: start;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
     color: var(--branco);
 }
@@ -192,6 +192,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 50px;
     color: var(--azul);
 }
@@ -613,7 +614,7 @@ p.textos-resposta {
     background-color: #333;
 }
 
-.sobre-text{
+.sobre-text {
     width: 30%;
     color: var(--azul);
     display: flex;
@@ -621,13 +622,13 @@ p.textos-resposta {
     gap: 20px;
 }
 
-.sobre-text h1{
+.sobre-text h1 {
     font-family: "Lora";
     font-style: italic;
     font-size: 25px;
 }
 
-.sobre-text p{
+.sobre-text p {
     font-family: 'NexaExtra';
     font-weight: bold;
     font-size: 18px;
@@ -635,7 +636,7 @@ p.textos-resposta {
 
 /* Rodapé */
 
-footer{
+footer {
     background-color: var(--azul);
     padding: 40px 20px;
     display: flex;
@@ -647,60 +648,60 @@ footer{
     color: var(--branco);
 }
 
-.footer-p1{
+.footer-p1 {
     width: 80%;
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
     align-items: center;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 200px;
 }
 
-.footer-text{
+.footer-text {
     display: flex;
     gap: 60px;
 }
 
-.footer-item{
+.footer-item {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer-item-tittle{
+.footer-item-tittle {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
 }
 
-.footer-item img{
+.footer-item img {
     width: 30px;
 }
 
-.footer-item h1{
+.footer-item h1 {
     font-family: "Lora";
     font-style: italic;
     font-size: 25px;
 }
 
-.footer-item p{
+.footer-item p {
     font-family: 'NexaExtra';
     font-weight: 500;
-    font-size: 18px;  
+    font-size: 18px;
     width: 300px;
 }
 
-.footer-item2{
+.footer-item2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
 
-.footer-p2{
+.footer-p2 {
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -709,7 +710,7 @@ footer{
     padding-top: 30px;
 }
 
-.copy a{
+.copy a {
     font-family: 'NexaExtra';
     font-weight: 500;
     font-size: 18px;
@@ -717,16 +718,124 @@ footer{
     transition: 300ms;
 }
 
-.copy a:hover{
+.copy a:hover {
     color: var(--cinza);
 }
 
-.redes{
+.redes {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.redes img{
+.redes img {
     width: 30px;
+}
+
+/* Medias Query's */
+
+@media (max-width: 1450px) {
+    .container-inicio {
+        height: 100%;
+    }
+
+    .container-inicio h1 {
+        width: 100%;
+    }
+
+    .container-inicio p {
+        width: 100%;
+    }
+
+    .container-passo-item {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template: auto auto auto / auto auto;
+        gap: 40px;
+    }
+
+    .container-portfolio {
+        display: grid;
+        grid-template-columns: 250px 250px 250px 250px;
+        /* grid-template-rows: 100px; */
+        grid-template-rows: 250px 250px;
+        grid-template: auto auto auto / auto auto;
+        gap: 3px;
+    }
+
+
+    .sobre-nos {
+        flex-direction: column;
+    }
+
+    .carousel-container2 {
+        width: 80%;
+    }
+
+    .sobre-text {
+        width: 80%;
+    }
+
+    .footer-p1 {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .container-inicio-text {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .container-inicio-button button {
+        margin-left: 0;
+    }
+
+    .container-inicio-icones {
+        margin-left: 0;
+    }
+
+    .container-inicio h1 {
+        width: 100%;
+        font-size: 50px;
+    }
+
+    .container-inicio p {
+        width: 100%;
+    }
+
+    .inicio-p2 img {
+        width: 100%;
+    }
+
+    section#fundo-azul-escuro {
+        padding: 0;
+    }
+
+    section div.caixa-perguntas {
+        margin: 20px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+    }
+
+    .footer-item p {
+        width: 90%;
+    }
+
+    .footer-p2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-list{
+        z-index: 1000;
+    }
+
+    .nav.active .hamburguer{
+        z-index: 2000;
+    }
 }
