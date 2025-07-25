@@ -452,6 +452,26 @@ header {
     opacity: 0.5;
 }
 
+.button-catalogo button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--branco);
+    font-family: 'NexaHeavy';
+    font-weight: 400;
+    font-size: 18px;
+    border: solid 3px var(--branco);
+    border-radius: 0px;
+
+    transition: 300ms;
+}
+
+.button-catalogo button:hover {
+    transform: scale(0.95);
+    color: var(--azul);
+    background-color: var(--branco);
+    border: solid 3px var(--branco);
+}
+
 /*CÓDIGO DÚVIDAS FREQUENTES*/
 
 section#fundo-azul-escuro {
@@ -732,6 +752,99 @@ footer {
     width: 30px;
 }
 
+/* Modal */
+.abrir-modal{
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    position: relative;
+    background-color: #6b6b6b;
+    padding: 30px;
+    border-radius: 16px;
+    width: 350px;
+    color: var(--branco);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+    font-family: "Lora";
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+label {
+    font-family: 'NexaExtra';
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 18px;
+    font-size: 14px;
+    background-color: var(--branco);
+    color: #333;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 1.5px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #6b6b6b;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
 /* Medias Query's */
 
 @media (max-width: 1450px) {
@@ -831,11 +944,11 @@ footer {
         gap: 20px;
     }
 
-    .nav-list{
+    .nav-list {
         z-index: 1000;
     }
 
-    .nav.active .hamburguer{
+    .nav.active .hamburguer {
         z-index: 2000;
     }
 }

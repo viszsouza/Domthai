@@ -204,6 +204,7 @@ nav{
 .nav-list a{
     padding-block: 15px;
     transition: 300ms;
+    cursor: pointer;
 }
 
 .roxo{

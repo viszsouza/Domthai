@@ -92,3 +92,66 @@ const navlist = document.querySelector(".nav-list")
 
 navlist.addEventListener("click", () => nav.classList.toggle("active"));
 hamburguer.addEventListener("click", () => nav.classList.toggle("active"));
+
+// MODAL
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("modalOverlay");
+    const openButtons = document.querySelectorAll(".abrir-modal");
+    const closeButton = document.getElementById("fecharModal");
+    const enviarBtn = document.getElementById("enviarWhatsapp");
+
+    // Abrir modal
+    openButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
+    });
+
+    // Fechar modal
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Enviar dados para WhatsApp
+    enviarBtn.addEventListener("click", () => {
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+
+        if (!nome || !email || !telefone) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        const numeroDestino = "5581999999999"; // Substitua pelo número correto com DDD
+        const mensagem = `Olá! Gostaria de acessar o catálogo.\n\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}`;
+        const urlWhatsapp = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
+
+        window.open(urlWhatsapp, "_blank");
+
+        // Fecha o modal após envio
+        modal.style.display = "none";
+    });
+});
+
+// ANIMAÇÕES GLOBAIS
+// Coletando o observador da página
+const myObserver = new IntersectionObserver( (entries) => {
+    entries.forEach( (entry) => {
+        if (entry.isIntersecting === true){
+            entry.target.classList.add('show')
+        } 
+    })
+})
+
+// Selecionando os elementos com a classe ".hidden"
+const elements = document.querySelectorAll('.hidden')
+
+// Selecionando 1 arquivos por vez da classe ".hidden"
+elements.forEach( (element) => myObserver.observe(element))
+
+// Selecionando os elementos com a classe ".hidden"
+const elements2 = document.querySelectorAll('.hidden2')
+
+// Selecionando 1 arquivos por vez da classe ".hidden"
+elements2.forEach( (element) => myObserver.observe(element))
