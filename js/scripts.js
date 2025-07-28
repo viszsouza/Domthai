@@ -136,11 +136,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ANIMAÇÕES GLOBAIS
 // Coletando o observador da página
-const myObserver = new IntersectionObserver( (entries) => {
-    entries.forEach( (entry) => {
-        if (entry.isIntersecting === true){
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
             entry.target.classList.add('show')
-        } 
+        }
     })
 })
 
@@ -148,10 +148,29 @@ const myObserver = new IntersectionObserver( (entries) => {
 const elements = document.querySelectorAll('.hidden')
 
 // Selecionando 1 arquivos por vez da classe ".hidden"
-elements.forEach( (element) => myObserver.observe(element))
+elements.forEach((element) => myObserver.observe(element))
 
 // Selecionando os elementos com a classe ".hidden"
 const elements2 = document.querySelectorAll('.hidden2')
 
 // Selecionando 1 arquivos por vez da classe ".hidden"
-elements2.forEach( (element) => myObserver.observe(element))
+elements2.forEach((element) => myObserver.observe(element))
+
+// MOSTRAR WHATSAPP QUANDO DESCER
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const alvo = document.getElementById('mostrarAoSair');
+
+        if (!entry.isIntersecting) {
+            // Quando elementoAlvo sai da tela
+            alvo.classList.remove('show');
+        } else {
+            // Quando elementoAlvo volta à tela
+            alvo.classList.add('show');
+        }
+    });
+});
+
+// Observar o elemento com id "elementoAlvo"
+const elemento = document.getElementById('inicio');
+observer.observe(elemento);
