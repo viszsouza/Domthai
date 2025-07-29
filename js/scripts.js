@@ -162,15 +162,34 @@ const observer = new IntersectionObserver((entries) => {
         const alvo = document.getElementById('mostrarAoSair');
 
         if (!entry.isIntersecting) {
-            // Quando elementoAlvo sai da tela
+            // Remove possível classe de saída
+            alvo.classList.add('hide');
+
+            // Garante recomeçar animação
+            void alvo.offsetWidth;
+
+            // Adiciona a animação de entrada
             alvo.classList.remove('show');
         } else {
-            // Quando elementoAlvo volta à tela
+            // Remove animação de entrada
             alvo.classList.add('show');
+
+            // Força reinício da animação
+            void alvo.offsetWidth;
+
+            // Adiciona a animação de saída
+            alvo.classList.remove('hide');
+
+            // Após animação, oculta o elemento
+            alvo.addEventListener('animationend', function handler(e) {
+                if (e.animationName === 'desaparecerSuave') {
+                    alvo.style.display = 'none';
+                    alvo.removeEventListener('animationend', handler);
+                }
+            });
         }
     });
 });
 
-// Observar o elemento com id "elementoAlvo"
 const elemento = document.getElementById('inicio');
 observer.observe(elemento);

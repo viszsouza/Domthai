@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* Variaveis */
-:root{
+:root {
     --branco: #FFFFFF;
     --cinza: #BCBDC1;
     --azul: #1f284f;
@@ -29,7 +29,7 @@
 }
 
 /* Geral */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,11 +37,11 @@
     background-color: transparent;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -53,29 +53,34 @@ img {
 
 /* Barra de rolagem */
 body::-webkit-scrollbar {
-  width: 5px;               /* width of the entire scrollbar */
+    width: 5px;
+    /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--preto);        /* color of the tracking area */
+    background: var(--preto);
+    /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--branco);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: none;  /* creates padding around scroll thumb */
+    background-color: var(--branco);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: none;
+    /* creates padding around scroll thumb */
 }
 
 /* Animações */
 /* Animação 1 - De ladinho*/
-.hidden{
+.hidden {
     opacity: 0;
     filter: blur(15px);
     transform: translateX(-100%);
     transition: all 1s;
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
@@ -85,14 +90,14 @@ body::-webkit-scrollbar-thumb {
 
 /* Animação 2 - De baixo*/
 
-.hidden2{
+.hidden2 {
     opacity: 0;
     filter: blur(15px);
     transform: translateY(100%);
     transition: all 1s;
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
@@ -100,28 +105,28 @@ body::-webkit-scrollbar-thumb {
     transition: all 1s;
 }
 
-.item-info:nth-child(2){
+.item-info:nth-child(2) {
     transition-delay: 0.25s;
 }
 
-.item-info:nth-child(3){
+.item-info:nth-child(3) {
     transition-delay: 0.50s;
 }
 
-.item-info:nth-child(4){
+.item-info:nth-child(4) {
     transition-delay: 0.75s;
 }
 
-.item-info:nth-child(5){
+.item-info:nth-child(5) {
     transition-delay: 1s;
 }
 
-.item-info:nth-child(6){
+.item-info:nth-child(6) {
     transition-delay: 1.25s;
 }
 
 /* Whatsapp flutuante */
-.whatsapp img{
+.whatsapp img {
     position: fixed;
     width: 90px;
     bottom: 0;
@@ -134,41 +139,53 @@ body::-webkit-scrollbar-thumb {
     filter: drop-shadow(0px 0px 2px var(--azul));
 }
 
-.whatsapp img:hover{
+.whatsapp img:hover {
     transform: scale(0.95);
 }
 
-.acesso img{
+.acesso img {
     position: fixed;
     width: 110px;
     bottom: 0;
     margin-bottom: 170px;
     right: 0;
     margin-right: 65px;
-    transition: 300ms;
 
     z-index: 99;
     filter: drop-shadow(0px 0px 2px var(--azul));
+    animation: aparecerSuave 0.5s ease forwards;
 }
 
-.acesso img:hover{
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.acesso img:hover {
     transform: scale(0.95);
 }
 
 @media (max-width: 750px) {
-    .whatsapp img{
+    .whatsapp img {
         margin-bottom: 20px;
         margin-right: 20px;
     }
 
-    .acesso img{
+    .acesso img {
         margin-bottom: 120px;
         margin-right: 10px;
     }
 }
 
 /* NavBar */
-nav{
+nav {
     display: flex;
     padding: 20px;
     gap: 20px;
@@ -183,7 +200,7 @@ nav{
     z-index: 99;
 }
 
-.logo img{
+.logo img {
     width: 150px;
     height: 65px;
     object-fit: cover;
@@ -191,35 +208,34 @@ nav{
     filter: drop-shadow(0px 0px 30px var(--azul));
 }
 
-.logo img:hover{
+.logo img:hover {
     transform: scale(1.05);
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     gap: 30px;
     list-style: none;
 }
 
-.nav-list a{
+.nav-list a {
     padding-block: 15px;
     transition: 300ms;
     cursor: pointer;
 }
 
-.roxo{
+.roxo {
     color: var(--branco);
 }
 
-.roxo:hover{
+.roxo:hover {
     transform: scale(1.05);
     text-decoration: underline;
 }
 
-.page{
-}
+.page {}
 
-.nav-orç{
+.nav-orç {
     padding: 5px 15px;
     color: var(--verde);
     background-color: var(--branco);
@@ -227,17 +243,17 @@ nav{
     box-shadow: var(--shadow);
 }
 
-.nav-orç:hover{
+.nav-orç:hover {
     background-color: var(--marrom);
     color: var(--branco);
 }
 
-.nav-list a:hover{
+.nav-list a:hover {
     font-size: 18px;
 }
 
 /* Hamburguer */
-.hamburguer{
+.hamburguer {
     display: none;
     border: none;
     background: none;
@@ -245,7 +261,8 @@ nav{
     cursor: pointer;
 }
 
-.hamburguer::after, .hamburguer::before{
+.hamburguer::after,
+.hamburguer::before {
     content: " ";
     display: block;
     width: 30px;
@@ -257,16 +274,16 @@ nav{
 }
 
 @media (max-width: 750px) {
-    .hamburguer{
+    .hamburguer {
         display: block;
         z-index: 1;
     }
 
-    nav{
+    nav {
         justify-content: space-between;
     }
 
-    .nav-list{
+    .nav-list {
         position: fixed;
         top: 0;
         left: 0;
@@ -284,68 +301,68 @@ nav{
         pointer-events: none;
     }
 
-    .nav-list a{
+    .nav-list a {
         margin-top: 150px;
         font-size: 20px;
         opacity: 0;
     }
 
-    .nav-list li:nth-child(1) a{
+    .nav-list li:nth-child(1) a {
         transition: 0.5s 0.2s;
     }
 
-    .nav-list li:nth-child(2) a{
+    .nav-list li:nth-child(2) a {
         transition: 0.5s 0.4s;
     }
 
-    .nav-list li:nth-child(3) a{
+    .nav-list li:nth-child(3) a {
         transition: 0.5s 0.6s;
     }
 
-    .nav-list li:nth-child(4) a{
+    .nav-list li:nth-child(4) a {
         transition: 0.5s 0.8s;
     }
 
-    .nav-list li:nth-child(5) a{
+    .nav-list li:nth-child(5) a {
         transition: 0.5s 1s;
     }
 
-    .nav-list li:nth-child(6) a{
+    .nav-list li:nth-child(6) a {
         transition: 0.5s 1.2s;
     }
 
-    .nav-list li:nth-child(7) a{
+    .nav-list li:nth-child(7) a {
         transition: 0.5s 1.4s;
     }
 
-    .nav-list li:nth-child(8) a{
+    .nav-list li:nth-child(8) a {
         transition: 0.5s 1.6s;
     }
 
     /* Animação */
 
-    .nav.active .nav-list{
+    .nav.active .nav-list {
         clip-path: circle(1500px at 90% -15%);
         pointer-events: all;
     }
 
-    .nav.active .nav-list a{
+    .nav.active .nav-list a {
         opacity: 1;
     }
 
-    .nav.active .hamburguer{
+    .nav.active .hamburguer {
         position: fixed;
         top: 5%;
         right: 5%;
         border-top-color: transparent;
     }
 
-    .nav.active .hamburguer::before{
-        transform:  rotate(135deg);
+    .nav.active .hamburguer::before {
+        transform: rotate(135deg);
     }
 
-    .nav.active .hamburguer::after{
-        transform:  rotate(-135deg);
+    .nav.active .hamburguer::after {
+        transform: rotate(-135deg);
         top: -7px;
     }
 }
