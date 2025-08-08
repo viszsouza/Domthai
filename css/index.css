@@ -552,7 +552,7 @@ details[open]>*:not(summary) {
 }
 
 details>p {
-    text-align: justify;
+    text-align: start;
     font-size: 18px;
     color: var(--branco);
     font-weight: 400;
@@ -560,7 +560,7 @@ details>p {
 }
 
 p.textos-resposta {
-    text-align: justify;
+    text-align: start;
     background-color: var(--azul);
     font-size: 16px;
     color: var(--branco);
