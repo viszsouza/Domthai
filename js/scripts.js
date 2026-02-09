@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const numeroDestino = "558196806314"; // Substitua pelo número correto com DDD
-        const mensagem = `Olá! Gostaria de acessar o catálogo.\n\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}`;
+        const mensagem = `Olá! Gostaria de acessar o catálogo.\n\nNome: ${nome}\nEstou interessado(a) em: ${email}\nTelefone: ${telefone}`;
         const urlWhatsapp = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
 
         window.open(urlWhatsapp, "_blank");
