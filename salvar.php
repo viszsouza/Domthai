@@ -1,9 +1,9 @@
 <?php
 // Configuração do banco
 $servername = "localhost";
-$username   = "root";      // seu usuário MySQL
-$password   = "";          // sua senha MySQL
-$dbname     = "viszdev_db";
+$username   = "domtha46_user";      // seu usuário MySQL
+$password   = "domthaisenha123!";          // sua senha MySQL
+$dbname     = "domtha46_cadastros";
 
 // Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
